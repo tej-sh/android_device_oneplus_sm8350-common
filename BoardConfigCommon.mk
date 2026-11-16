@@ -123,6 +123,9 @@ TARGET_COPY_OUT_ODM := odm
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
+
+# Voltage reserved partition sizes
+-include vendor/voltage/config/BoardConfigReservedSize.mk
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
 # Recovery
@@ -141,7 +144,7 @@ BOOT_SECURITY_PATCH := 2025-12-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # SEPolicy
-include device/lineage/sepolicy/libion/sepolicy.mk
+include device/voltage/sepolicy/libion/sepolicy.mk
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
 
