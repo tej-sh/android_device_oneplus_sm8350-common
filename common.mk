@@ -251,8 +251,7 @@ PRODUCT_COPY_FILES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
-    libqti-perfd-client \
-    libperfmgr
+    libqti-perfd-client
 
 TARGET_PROVIDES_POWERHAL := true
 
